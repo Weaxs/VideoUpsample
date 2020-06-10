@@ -1,0 +1,24 @@
+﻿<controls:MetroWindow x:Class="VideoUpsampling_WPF.MediaPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VideoUpsampling_WPF"
+        xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        Title="MediaPlayer" Width="726" Height="930.6" BorderBrush="DarkGray" Background="White" WindowTitleBrush="DarkGray">
+
+
+    <Grid Margin="0,3,-87,43" Height="921" Width="810">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="671*"/>
+            <ColumnDefinition Width="139*"/>
+        </Grid.ColumnDefinitions>
+        <MediaElement Name="Source" Width="480" Height="360" MediaEnded="Source_MediaEnded" LoadedBehavior="Manual"   VerticalAlignment="Top" Margin="0,0,190.4,0" />
+
+        <MediaElement Name="Output" Width="720" Height="480" MediaEnded="Output_MediaEnded" LoadedBehavior="Manual" HorizontalAlignment="Left" Margin="0,365,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" />
+        <Button Content="播放" FontFamily="微软雅黑" FontStyle="Normal"  FontSize="15" Click="Play" HorizontalAlignment="Left" Margin="495,35,0,0" VerticalAlignment="Top" Width="116" Height="40"/>
+        <Button Content="暂停" FontFamily="微软雅黑" FontStyle="Normal"  FontSize="15" Click="Pause" HorizontalAlignment="Left" Margin="500,214,0,0" VerticalAlignment="Top" Width="111" Height="40"/>
+
+    </Grid>
+</controls:MetroWindow>
